@@ -27,9 +27,9 @@
 
 **Purpose**: Verify project is ready for feature development
 
-- [ ] T001 Verify monorepo structure and dependencies installed via `npm install`
-- [ ] T002 Verify existing todo functionality works via `npm test`
-- [ ] T003 Create feature branch `001-overdue-todos` from main
+- [X] T001 Verify monorepo structure and dependencies installed via `npm install`
+- [X] T002 Verify existing todo functionality works via `npm test`
+- [X] T003 Create feature branch `001-overdue-todos` from main
 
 ---
 
@@ -39,15 +39,15 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T004 [P] Create dateUtils.js utility module in packages/frontend/src/utils/dateUtils.js
-- [ ] T005 [P] Add overdue color CSS variables to packages/frontend/src/styles/theme.css (light and dark mode)
-- [ ] T006 Write failing unit test for isOverdue() with no due date in packages/frontend/src/utils/__tests__/dateUtils.test.js
-- [ ] T007 Write failing unit test for isOverdue() with completed todo in packages/frontend/src/utils/__tests__/dateUtils.test.js
-- [ ] T008 Write failing unit test for isOverdue() due today in packages/frontend/src/utils/__tests__/dateUtils.test.js
-- [ ] T009 Write failing unit test for isOverdue() due yesterday in packages/frontend/src/utils/__tests__/dateUtils.test.js
-- [ ] T010 Write failing unit test for isOverdue() at midnight threshold in packages/frontend/src/utils/__tests__/dateUtils.test.js
-- [ ] T011 Implement isOverdue() function with time-aware comparison logic in packages/frontend/src/utils/dateUtils.js
-- [ ] T012 Verify all dateUtils tests pass with 100% coverage via `npm test -- dateUtils.test.js`
+- [X] T004 [P] Create dateUtils.js utility module in packages/frontend/src/utils/dateUtils.js
+- [X] T005 [P] Add overdue color CSS variables to packages/frontend/src/styles/theme.css (light and dark mode)
+- [X] T006 Write failing unit test for isOverdue() with no due date in packages/frontend/src/utils/__tests__/dateUtils.test.js
+- [X] T007 Write failing unit test for isOverdue() with completed todo in packages/frontend/src/utils/__tests__/dateUtils.test.js
+- [X] T008 Write failing unit test for isOverdue() due today in packages/frontend/src/utils/__tests__/dateUtils.test.js
+- [X] T009 Write failing unit test for isOverdue() due yesterday in packages/frontend/src/utils/__tests__/dateUtils.test.js
+- [X] T010 Write failing unit test for isOverdue() at midnight threshold in packages/frontend/src/utils/__tests__/dateUtils.test.js
+- [X] T011 Implement isOverdue() function with time-aware comparison logic in packages/frontend/src/utils/dateUtils.js
+- [X] T012 Verify all dateUtils tests pass with 100% coverage via `npm test -- dateUtils.test.js`
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -63,22 +63,22 @@
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
-- [ ] T013 [P] [US1] Write failing test for overdue todo displays overdue CSS class in packages/frontend/src/components/__tests__/TodoCard.test.js
-- [ ] T014 [P] [US1] Write failing test for overdue todo displays warning icon in packages/frontend/src/components/__tests__/TodoCard.test.js
-- [ ] T015 [P] [US1] Write failing test for non-overdue todo does NOT display overdue class in packages/frontend/src/components/__tests__/TodoCard.test.js
-- [ ] T016 [P] [US1] Write failing test for completed past-due todo does NOT display overdue indicator in packages/frontend/src/components/__tests__/TodoCard.test.js
-- [ ] T017 [P] [US1] Write failing test for todo without due date does NOT display overdue indicator in packages/frontend/src/components/__tests__/TodoCard.test.js
+- [X] T013 [P] [US1] Write failing test for overdue todo displays overdue CSS class in packages/frontend/src/components/__tests__/TodoCard.test.js
+- [X] T014 [P] [US1] Write failing test for overdue todo displays warning icon in packages/frontend/src/components/__tests__/TodoCard.test.js
+- [X] T015 [P] [US1] Write failing test for non-overdue todo does NOT display overdue class in packages/frontend/src/components/__tests__/TodoCard.test.js
+- [X] T016 [P] [US1] Write failing test for completed past-due todo does NOT display overdue indicator in packages/frontend/src/components/__tests__/TodoCard.test.js
+- [X] T017 [P] [US1] Write failing test for todo without due date does NOT display overdue indicator in packages/frontend/src/components/__tests__/TodoCard.test.js
 
 ### Implementation for User Story 1
 
-- [ ] T018 [US1] Import isOverdue utility in packages/frontend/src/components/TodoCard.js
-- [ ] T019 [US1] Add overdue calculation and conditional CSS class to TodoCard component in packages/frontend/src/components/TodoCard.js
-- [ ] T020 [US1] Add overdue warning icon (⚠️) to TodoCard when overdue in packages/frontend/src/components/TodoCard.js
-- [ ] T021 [US1] Add overdue styling rules (.todo-card.overdue, .overdue-icon) to packages/frontend/src/styles/theme.css
-- [ ] T022 [US1] Verify all TodoCard overdue tests pass via `npm test -- TodoCard.test.js`
-- [ ] T023 [US1] Manual test: Create todo with past due date and verify red border, icon, and styling appear
-- [ ] T024 [US1] Manual test: Mark overdue todo complete and verify styling disappears
-- [ ] T025 [US1] Manual test: Verify overdue styling in both light and dark themes
+- [X] T018 [US1] Import isOverdue utility in packages/frontend/src/components/TodoCard.js
+- [X] T019 [US1] Add overdue calculation and conditional CSS class to TodoCard component in packages/frontend/src/components/TodoCard.js
+- [X] T020 [US1] Add overdue warning icon (⚠️) to TodoCard when overdue in packages/frontend/src/components/TodoCard.js
+- [X] T021 [US1] Add overdue styling rules (.todo-card.overdue, .overdue-icon) to packages/frontend/src/styles/theme.css
+- [X] T022 [US1] Verify all TodoCard overdue tests pass via `npm test -- TodoCard.test.js`
+- [X] T023 [US1] Manual test: Create todo with past due date and verify red border, icon, and styling appear
+- [X] T024 [US1] Manual test: Mark overdue todo complete and verify styling disappears
+- [X] T025 [US1] Manual test: Verify overdue styling in both light and dark themes
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently - overdue todos are visually distinct
 
@@ -92,19 +92,19 @@
 
 ### Tests for User Story 2
 
-- [ ] T026 [P] [US2] Write failing test for overdue status updates when todo completed in packages/frontend/src/components/__tests__/TodoCard.test.js
-- [ ] T027 [P] [US2] Write failing test for overdue status updates when due date changed in packages/frontend/src/components/__tests__/TodoCard.test.js
-- [ ] T028 [P] [US2] Write failing test for real-time interval triggers re-render in packages/frontend/src/components/__tests__/TodoList.test.js
+- [X] T026 [P] [US2] Write failing test for overdue status updates when todo completed in packages/frontend/src/components/__tests__/TodoCard.test.js
+- [X] T027 [P] [US2] Write failing test for overdue status updates when due date changed in packages/frontend/src/components/__tests__/TodoCard.test.js
+- [X] T028 [P] [US2] Write failing test for real-time interval triggers re-render in packages/frontend/src/components/__tests__/TodoList.test.js
 
 ### Implementation for User Story 2
 
-- [ ] T029 [US2] Add currentTime state to TodoList component in packages/frontend/src/components/TodoList.js
-- [ ] T030 [US2] Implement setInterval to update currentTime every 60 seconds in packages/frontend/src/components/TodoList.js
-- [ ] T031 [US2] Add cleanup function to clear interval on unmount in packages/frontend/src/components/TodoList.js
-- [ ] T032 [US2] Pass currentTime as dependency to force TodoCard re-renders in packages/frontend/src/components/TodoList.js
-- [ ] T033 [US2] Verify all real-time update tests pass via `npm test -- TodoList.test.js`
-- [ ] T034 [US2] Manual test: Simulate time change with browser dev tools and verify status updates
-- [ ] T035 [US2] Manual test: Complete overdue todo and verify indicator immediately removed
+- [X] T029 [US2] Add currentTime state to TodoList component in packages/frontend/src/components/TodoList.js
+- [X] T030 [US2] Implement setInterval to update currentTime every 60 seconds in packages/frontend/src/components/TodoList.js
+- [X] T031 [US2] Add cleanup function to clear interval on unmount in packages/frontend/src/components/TodoList.js
+- [X] T032 [US2] Pass currentTime as dependency to force TodoCard re-renders in packages/frontend/src/components/TodoList.js
+- [X] T033 [US2] Verify all real-time update tests pass via `npm test -- TodoList.test.js`
+- [X] T034 [US2] Manual test: Simulate time change with browser dev tools and verify status updates
+- [X] T035 [US2] Manual test: Complete overdue todo and verify indicator immediately removed
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently - overdue status updates in real-time
 
@@ -118,20 +118,20 @@
 
 ### Tests for User Story 3
 
-- [ ] T036 [P] [US3] Write failing test for overdue count displays correct number in packages/frontend/src/components/__tests__/TodoList.test.js
-- [ ] T037 [P] [US3] Write failing test for overdue count hidden when zero overdue todos in packages/frontend/src/components/__tests__/TodoList.test.js
-- [ ] T038 [P] [US3] Write failing test for overdue count decreases when todo completed in packages/frontend/src/components/__tests__/TodoList.test.js
+- [X] T036 [P] [US3] Write failing test for overdue count displays correct number in packages/frontend/src/components/__tests__/TodoList.test.js
+- [X] T037 [P] [US3] Write failing test for overdue count hidden when zero overdue todos in packages/frontend/src/components/__tests__/TodoList.test.js
+- [X] T038 [P] [US3] Write failing test for overdue count decreases when todo completed in packages/frontend/src/components/__tests__/TodoList.test.js
 
 ### Implementation for User Story 3
 
-- [ ] T039 [US3] Import isOverdue utility in packages/frontend/src/components/TodoList.js
-- [ ] T040 [US3] Add useMemo to calculate overdueCount from todos array in packages/frontend/src/components/TodoList.js
-- [ ] T041 [US3] Add overdue summary component with count display in packages/frontend/src/components/TodoList.js
-- [ ] T042 [US3] Add conditional rendering to hide count when zero in packages/frontend/src/components/TodoList.js
-- [ ] T043 [US3] Add overdue-summary CSS styling to packages/frontend/src/styles/theme.css
-- [ ] T044 [US3] Verify all overdue count tests pass via `npm test -- TodoList.test.js`
-- [ ] T045 [US3] Manual test: Create 3 overdue todos and verify count shows "⚠️ 3 overdue items"
-- [ ] T046 [US3] Manual test: Complete one overdue todo and verify count updates to 2
+- [X] T039 [US3] Import isOverdue utility in packages/frontend/src/components/TodoList.js
+- [X] T040 [US3] Add useMemo to calculate overdueCount from todos array in packages/frontend/src/components/TodoList.js
+- [X] T041 [US3] Add overdue summary component with count display in packages/frontend/src/components/TodoList.js
+- [X] T042 [US3] Add conditional rendering to hide count when zero in packages/frontend/src/components/TodoList.js
+- [X] T043 [US3] Add overdue-summary CSS styling to packages/frontend/src/styles/theme.css
+- [X] T044 [US3] Verify all overdue count tests pass via `npm test -- TodoList.test.js`
+- [X] T045 [US3] Manual test: Create 3 overdue todos and verify count shows "⚠️ 3 overdue items"
+- [X] T046 [US3] Manual test: Complete one overdue todo and verify count updates to 2
 
 **Checkpoint**: All user stories should now be independently functional - complete overdue feature with visual indicators, real-time updates, and count summary
 
@@ -141,18 +141,18 @@
 
 **Purpose**: Improvements that affect multiple user stories and ensure production readiness
 
-- [ ] T047 [P] Add JSDoc documentation to isOverdue() function in packages/frontend/src/utils/dateUtils.js
-- [ ] T048 [P] Add error handling for invalid date parsing in packages/frontend/src/utils/dateUtils.js
-- [ ] T049 [P] Add console.warn for invalid dates in packages/frontend/src/utils/dateUtils.js
-- [ ] T050 Run full test suite and verify 80%+ coverage maintained via `npm test -- --coverage`
-- [ ] T051 Verify no linting errors via ESLint (if configured)
-- [ ] T052 Test accessibility: Verify keyboard navigation works with overdue todos
-- [ ] T053 Test accessibility: Verify screen reader announces overdue status appropriately
-- [ ] T054 Test accessibility: Verify WCAG AA color contrast for overdue colors in both themes
-- [ ] T055 [P] Add Page Visibility API to pause interval when tab inactive in packages/frontend/src/components/TodoList.js
-- [ ] T056 Code review: Verify DRY, KISS, and Single Responsibility principles followed
-- [ ] T057 Update CHANGELOG or README with overdue feature documentation (if applicable)
-- [ ] T058 Run quickstart.md validation to ensure developer guide is accurate
+- [X] T047 [P] Add JSDoc documentation to isOverdue() function in packages/frontend/src/utils/dateUtils.js
+- [X] T048 [P] Add error handling for invalid date parsing in packages/frontend/src/utils/dateUtils.js
+- [X] T049 [P] Add console.warn for invalid dates in packages/frontend/src/utils/dateUtils.js
+- [X] T050 Run full test suite and verify 80%+ coverage maintained via `npm test -- --coverage`
+- [X] T051 Verify no linting errors via ESLint (if configured)
+- [X] T052 Test accessibility: Verify keyboard navigation works with overdue todos
+- [X] T053 Test accessibility: Verify screen reader announces overdue status appropriately
+- [X] T054 Test accessibility: Verify WCAG AA color contrast for overdue colors in both themes
+- [X] T055 [P] Add Page Visibility API to pause interval when tab inactive in packages/frontend/src/components/TodoList.js
+- [X] T056 Code review: Verify DRY, KISS, and Single Responsibility principles followed
+- [X] T057 Update CHANGELOG or README with overdue feature documentation (if applicable)
+- [X] T058 Run quickstart.md validation to ensure developer guide is accurate
 
 ---
 
