@@ -5,6 +5,12 @@
 **Status**: Draft  
 **Input**: User description: "Support for Overdue Todo Items - Users need a clear, visual way to identify which todos have not been completed by their due date"
 
+## Clarifications
+
+### Session 2026-01-15
+
+- Q: When exactly does a todo become overdue - at midnight (00:00:00) or by comparing dates only? → A: Time-aware: A todo due on "2026-01-14" becomes overdue at exactly 00:00:00 on 2026-01-15
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Visual Identification of Overdue Items (Priority: P1)
@@ -59,7 +65,7 @@ Users want to see at a glance how many overdue tasks they have without counting 
 
 ### Edge Cases
 
-- What happens when a todo's due date is exactly at midnight (00:00)? Should it be considered overdue at 00:01 on that date or the next day?
+- A todo due on date X becomes overdue at exactly 00:00:00 on date X+1. Time-based comparison is used to determine overdue status.
 - How does the system handle todos with due dates far in the past (e.g., years ago)? Should there be different visual treatment for extremely overdue items?
 - What happens when the user's system clock is incorrect or timezone is misconfigured?
 - How does the system handle todos that transition from today to overdue while the user is actively editing them?
@@ -69,8 +75,8 @@ Users want to see at a glance how many overdue tasks they have without counting 
 
 ### Functional Requirements
 
-- **FR-001**: System MUST compare each incomplete todo's due date against the current date to determine if it is overdue
-- **FR-002**: System MUST consider a todo overdue only when the due date is strictly in the past (not including today's date)
+- **FR-001**: System MUST compare each incomplete todo's due date (with time component) against the current date/time to determine if it is overdue. A todo becomes overdue at exactly 00:00:00 on the day after its due date.
+- **FR-002**: System MUST consider a todo overdue only when the current date/time is greater than or equal to midnight (00:00:00) following the due date
 - **FR-003**: System MUST NOT mark completed todos as overdue, regardless of their due date
 - **FR-004**: System MUST NOT mark todos without a due date as overdue
 - **FR-005**: System MUST apply a distinct visual indicator to overdue todos that differentiates them from non-overdue todos
